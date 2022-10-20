@@ -1,4 +1,8 @@
 import requests
+import os
+import time
+
+'''
 
 # 通过response的响应内容确认url
 urls = "https://www.baidu.com/?tn=49055317_3_hao_pg"
@@ -44,3 +48,32 @@ datas3=responses3.content
 # 写入数据的重点  以字节类型对文件进行写入 不需要指定编码
 with open("百度3.html","wb")as file2:
     file2.write(datas3)
+
+'''
+'''______________________________________________________________________'''
+URL= "https://www.baidu.com/?tn=49055317_3_hao_pg"
+# 请求信息  字典
+# 默认使用headers作为请求头变量  字典
+# 写useragent的重要操作步骤   不要犯的错误
+# 不要在useragent的前面 加空格
+headers={
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36"
+}
+# verify=False 绕过ssl验证
+responses=requests.get(url=URL,headers=headers,verify=False)
+data=responses.content.decode()
+print(data)
+print(type(data))
+with open("百度一下.html","w",encoding="utf-8") as file1:
+    file1.write(data)
+time.sleep(5)
+os.remove("./百度一下.html")
+'''
+可能会出现的问题
+1.遇到百度验证
+    原因 请求次数频繁会涉及封 ua 或者 严重点 ip
+    解决 可以参考后面的学习内容  加cookie （构建在headers里面的字段）
+2.访问百度的时候 报ssl错误
+    执行 绕过ssl验证的操作
+    在get方法里面 加 verify=False参数 绕过ssl验证
+'''
