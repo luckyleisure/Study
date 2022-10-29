@@ -5,9 +5,10 @@
 全局函数做友元
 类做友元
 成员函数做友元*/
+//1.全局函数做友元
 class Building
 {
-	friend void GoodGay(Building* p);
+	friend void GoodGay(Building* p);//Goodgay全局函数是Building好朋友，可以访问Building中私有成员
 public:
 	Building() 
 	{
