@@ -40,9 +40,9 @@ response = requests.get(url=url, headers=headers)
 # （保存图片/音视频类型数据只能通过   保存字节的形式进行保存  规则）
 # 这里是正确的写法
 bytes_data = response.content
-# with open("歪果仁.png","wb")as file1:
-#     file1.write(bytes_data)
-# #     pycharm 是编辑器 支持 打开图片的(机制)  但是不支持打开音视频(pycharm是编辑器不是播放器)规则
+with open("歪果仁.png","wb")as file1:
+    file1.write(bytes_data)
+#pycharm 是编辑器 支持 打开图片的(机制)  但是不支持打开音视频(pycharm是编辑器不是播放器)规则
 
 
 #
