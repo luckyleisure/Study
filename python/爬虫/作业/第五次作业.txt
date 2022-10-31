@@ -1,0 +1,14 @@
+需求
+通过selenium爬取京东图书关键字的书籍数据
+https://search.jd.com/Search?keyword=%E5%9B%BE%E4%B9%A6&enc=utf-8&pvid=de63a8e8d06c44d4a477ae5b17e94d5c
+字段需求
+1书名
+2价格
+3门店名字
+4书籍链接
+
+要求
+1获取完每一页的所有书籍数据
+2以及需要翻页获取
+
+xxxx期--名字-第xx次作业

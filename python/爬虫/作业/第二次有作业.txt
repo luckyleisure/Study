@@ -1,0 +1,16 @@
+翻页数据获取   每一位同学 自己抓一下异步加载的数据包  对比每个数据包的参数    构建每一页的参数发送请求
+1采集十页数据(不能点击下一页抓包  只能通过向下滑动抓包！) 保存到本地为json格式数据  每30条数据保存到一个json格式文件
+       提示:可以把每一页的数据保存到列表里面再通过    转换方法把列表转换成字符串类型数据 再写入json文件  
+       不然json文件会报错
+
+2自己使用正则匹配车的价格和型号 
+提示  
+第1页： country=0&sort_new=hot_desc&city_name=%E6%88%90%E9%83%BD&limit=30&page=1
+第2页： country=0&sort_new=hot_desc&city_name=%E6%88%90%E9%83%BD&limit=30&page=2
+第3页：country=0&sort_new=hot_desc&city_name=%E6%88%90%E9%83%BD&limit=30&page=3
+
+
+2209-第x次作业-xxx(真名)
+把自己写的代码复制给我
+发送到 3569974821@qq.com
+下周三之前交       本周五讲解
