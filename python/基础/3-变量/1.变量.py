@@ -58,3 +58,4 @@ print(my_name)
 schoolname = 'sixstar'
 print(schoolname)  # sixstar
 print('schoolname')  # schoolname
+
